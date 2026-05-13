@@ -1,3 +1,5 @@
+**Link para o Dashboard:** [https://pigrupo59-buvhfpxmsdoyas6olwplpg.streamlit.app/]
+
 # PIgrupo59
 # Projeto Integrador do 1º trimestre de 2026 - GRUPO 25
 ## Integrantes
