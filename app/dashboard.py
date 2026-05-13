@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 
@@ -9,7 +8,7 @@ st.write("Projeto Integrador - Grupo 59")
 # Carregar a base tratada
 @st.cache_data
 def load_data():
-    return pd.read_csv('../data/base_tratada.csv', sep=';')
+    return pd.read_csv('data/base_tratada.csv', sep=';')
 
 df = load_data()
 
