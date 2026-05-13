@@ -5,10 +5,10 @@ import pandas as pd
 st.title("Análise de Acidentes de Trânsito - SP")
 st.write("Projeto Integrador - Grupo 59")
 
-# Carregar a base tratada
+# Carregar a base tratada com encoding para ler acentos
 @st.cache_data
 def load_data():
-    return pd.read_csv('data/base_tratada.csv', sep=';')
+    return pd.read_csv('data/base_tratada.csv', sep=';', encoding='latin-1')
 
 df = load_data()
 
