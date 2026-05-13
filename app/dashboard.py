@@ -1,21 +1,31 @@
 import streamlit as st
 import pandas as pd
 
-# Título da página
-st.title("Análise de Acidentes de Trânsito - SP")
+# Configuração da página
+st.set_page_config(page_title="Dashboard de Acidentes SP", layout="wide")
+
+st.title("Análise de Acidentes de Trânsito - Estado de SP")
 st.write("Projeto Integrador - Grupo 59")
 
-# Carregar a base tratada com encoding para ler acentos
+# Carregar os dados
 @st.cache_data
 def load_data():
-    return pd.read_csv('data/base_tratada.csv', sep=';', encoding='latin-1')
+    # Lendo o arquivo e filtrando apenas SP na hora
+    df = pd.read_csv('data/base_tratada.csv', sep=';', encoding='latin-1')
+    # Garantindo que só apareça SP
+    df_sp = df[df['uf'] == 'SP']
+    return df_sp
 
-df = load_data()
+try:
+    df = load_data()
 
-# Métrica Geral
-st.metric("Total de Acidentes Analisados em SP", len(df))
+    # Mostrar o número total de acidentes apenas em SP
+    st.metric("Total de Acidentes em São Paulo", len(df))
 
-# Gráfico de Barras: Top 10 cidades com mais acidentes
-st.subheader("Top 10 Municípios com mais acidentes")
-top_cidades = df['municipio'].value_counts().head(10)
-st.bar_chart(top_cidades)
+    # Criar o gráfico das 10 cidades com mais acidentes em SP
+    st.subheader("Top 10 Municípios com mais acidentes (Apenas SP)")
+    top_cidades = df['municipio'].value_counts().head(10)
+    st.bar_chart(top_cidades)
+
+except Exception as e:
+    st.error(f"Erro ao carregar os dados: {e}")
