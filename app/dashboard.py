@@ -244,10 +244,7 @@ def render_time_analysis(df: pd.DataFrame) -> None:
         if heatmap.empty:
             st.info("Sem dados suficientes para o mapa de calor.")
         else:
-            st.dataframe(
-                heatmap.style.background_gradient(cmap="OrRd", axis=None),
-                width="stretch",
-            )
+            st.dataframe(heatmap, width="stretch")
 
     with right_col:
         st.markdown("**Janelas criticas do dia**")
