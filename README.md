@@ -1,5 +1,17 @@
 # PIgrupo59
 
+**Link para o Dashboard:** [https://pigrupo59-buvhfpxmsdoyas6olwplpg.streamlit.app/]
+
+Projeto Integrador do 1º trimestre de 2026 - Grupo 59
+
+## Integrantes
+- FERNANDO CAMARA DE MORAES
+- JHULLY CAROLINY RODRIGUES VIEIRA DA SILVA
+- MURILO SANTOS DORIGO
+- RAUL ALEXANDRE MARIA
+- RONALDO KOJI YAMASAKI
+- TAMIRES FERREIRA NUNES
+
 Dashboard academico em Streamlit para analise de acidentes em rodovias federais com foco no estado de Sao Paulo e benchmark nacional.
 
 ## Visao do projeto
