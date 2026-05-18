@@ -1,8 +1,8 @@
-# PIgrupo59
+# PIgrupo07
 
 **Link para o Dashboard:** [https://pigrupo59-buvhfpxmsdoyas6olwplpg.streamlit.app/]
 
-Projeto Integrador do 1º trimestre de 2026 - Grupo 59
+Projeto Integrador do 1º trimestre de 2026 - Grupo 07
 
 ## Integrantes
 - FERNANDO CAMARA DE MORAES
